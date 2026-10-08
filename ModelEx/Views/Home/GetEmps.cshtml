@@ -1,0 +1,33 @@
+﻿@model IEnumerable<ModelEx.Models.Emp>
+<!DOCTYPE html>
+    <html>
+    <head>
+        <title></title>
+    </head>
+    <body>
+      <h2> Emp List </h2>
+      <table>
+          <thead>
+              <tr>
+                  <th> Emp ID </th>
+                  <th> Emp Name </th>
+                  <th> Dept Name </th>
+                  <th> Salary </th>
+              </tr>
+          </thead>
+          <tbody>
+            @foreach (var temp in Model)
+            {
+              <tr>
+                  <td>@temp.EmpID</td>
+                  <td>@temp.EmpName</td>
+                  <td>@temp.DeptName</td>
+                  <td>@temp.Salary</td>
+              </tr>    
+            
+            }
+        </tbody>
+      </table>
+      
+    </body>
+    </html>
